@@ -18,4 +18,9 @@
         <item>妖怪</item>
         <item>花痴</item>
     </string-array>
+
+    <string-array name="data">
+        <item>发现内容展示</item>
+        <item>我的内容展示</item>
+    </string-array>
 </resources>

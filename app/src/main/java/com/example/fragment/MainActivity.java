@@ -7,8 +7,8 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
     private FragmentTransaction fragmentTransaction;
-    private int[] imageid={R.drawable.pic1,R.drawable.pic2jpg,R.drawable.pic3};
-    private String[] menu={"水煮肉片","鱼香肉丝","酸菜鱼"};
+    private int[] imageid = {R.drawable.find, R.drawable.my};
+    private String[] menu = {"好友", "发现", "我的"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

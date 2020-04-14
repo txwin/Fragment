@@ -19,7 +19,7 @@
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="5dp"
-        android:background="?android:attr/listDivider" />
+        android:background="@android:color/holo_blue_bright" />
 
     <FrameLayout
         android:id="@+id/food"
