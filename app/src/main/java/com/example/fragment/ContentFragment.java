@@ -30,6 +30,7 @@ public class ContentFragment extends Fragment {
             imageView=view.findViewById(R.id.imageView);
         }
 
+        //激活ContentFragment后判断内容
         switch (MenuFragment.getCLICK_TAG()){
             case "PIC1":
             default:
