@@ -51,10 +51,12 @@ public class ContentFragment extends Fragment {
                 switch (MenuFragment.getCLICK_TAG()){
                     case "PIC1":
                     default:
-                        Toast.makeText((MainActivity)getActivity(),((MainActivity)getActivity()).getMenu()[1],Toast.LENGTH_SHORT).show();
+                        Toast.makeText((MainActivity) getActivity(),
+                                getResources().getStringArray(R.array.menu)[1],
+                                Toast.LENGTH_SHORT).show();
                         break;
                     case "PIC2":
-                        Toast.makeText((MainActivity)getActivity(),((MainActivity)getActivity()).getMenu()[2],Toast.LENGTH_SHORT).show();
+                        Toast.makeText((MainActivity) getActivity(), getResources().getStringArray(R.array.menu)[2], Toast.LENGTH_SHORT).show();
                         break;
                 }
             }

@@ -18,9 +18,13 @@
         <item>妖怪</item>
         <item>花痴</item>
     </string-array>
-
     <string-array name="data">
         <item>发现内容展示</item>
         <item>我的内容展示</item>
+    </string-array>
+    <string-array name="menu">
+        <item>好友</item>
+        <item>发现</item>
+        <item>我的</item>
     </string-array>
 </resources>

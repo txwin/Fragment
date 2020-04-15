@@ -22,7 +22,7 @@
         android:background="@android:color/holo_blue_bright" />
 
     <FrameLayout
-        android:id="@+id/food"
+        android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="6" />

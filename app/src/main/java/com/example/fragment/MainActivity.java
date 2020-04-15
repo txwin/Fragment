@@ -8,7 +8,6 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
     private FragmentTransaction fragmentTransaction;
     private int[] imageid = {R.drawable.find, R.drawable.my};
-    private String[] menu = {"好友", "发现", "我的"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,16 +18,12 @@ public class MainActivity extends AppCompatActivity {
         MenuFragment menuFragment=new MenuFragment();
         fragmentTransaction=getSupportFragmentManager().beginTransaction();
 
-        fragmentTransaction.replace(R.id.food,friendFragment);
+        fragmentTransaction.replace(R.id.content, friendFragment);
         fragmentTransaction.replace(R.id.menu,menuFragment);
         fragmentTransaction.commit();
     }
 
     public int[] getImageid() {
         return imageid;
-    }
-
-    public String[] getMenu() {
-        return menu;
     }
 }

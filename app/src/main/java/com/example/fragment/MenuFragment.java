@@ -2,7 +2,6 @@ package com.example.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,23 +34,23 @@ public class MenuFragment extends Fragment {
             textView3 = view.findViewById(R.id.textView3);
         }
 
-        textView1.setText(((MainActivity) getActivity()).getMenu()[0]);
-        textView2.setText(((MainActivity) getActivity()).getMenu()[1]);
-        textView3.setText(((MainActivity) getActivity()).getMenu()[2]);
+        textView1.setText(getResources().getStringArray(R.array.menu)[0]);
+        textView2.setText(getResources().getStringArray(R.array.menu)[1]);
+        textView3.setText(getResources().getStringArray(R.array.menu)[2]);
 
         textView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //在触发监听时替换Fragment关联对象
                 friendFragment = new FriendFragment();
-                ((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.food, friendFragment).commit();
+                ((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.content, friendFragment).commit();
             }
         });
         textView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 contentFragment = new ContentFragment();
-                ((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.food, contentFragment).commit();
+                ((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.content, contentFragment).commit();
                 //设置标签用于ContentFragment判断内容选择（图片内容）
                 CLICK_TAG="PIC1";
             }
@@ -60,7 +59,7 @@ public class MenuFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 contentFragment = new ContentFragment();
-                ((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.food, contentFragment).commit();
+                ((MainActivity) getActivity()).getSupportFragmentManager().beginTransaction().replace(R.id.content, contentFragment).commit();
                 CLICK_TAG="PIC2";
 //                contentFragment = (ContentFragment) ((MainActivity) getActivity()).getSupportFragmentManager().findFragmentById(R.id.food);
 //                contentFragment.setImage(((MainActivity) getActivity()).getImageid()[2]);
